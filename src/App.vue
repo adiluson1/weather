@@ -80,7 +80,8 @@ export default {
             CitiesStorageService.setCity(this.city);
             this.cities = CitiesStorageService.getCities();
           })
-          .catch(() => {
+          .catch((e) => {
+            console.log(e);
             this.errorMessage = this.$vuetify.lang.t('$vuetify.errorMsg');
           });
       }
